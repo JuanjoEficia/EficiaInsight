@@ -9,52 +9,62 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 40px;
             background-color: #ffffff;
-            color: #333333;
+            color: #222;
         }
-        .header {
+        header {
             display: flex;
             align-items: center;
-            margin-bottom: 40px;
+            justify-content: space-between;
+            margin-bottom: 30px;
         }
         .logo {
-            max-height: 180px;
-            margin-right: 40px;
+            height: 120px;
         }
-        .quote-container {
+        .quote-box {
+            width: 50%;
             font-size: 0.9em;
             color: #555;
-            max-width: 600px;
+            text-align: right;
+            animation: fade 20s infinite;
             min-height: 60px;
         }
-        .section-title {
-            font-size: 1.5em;
-            margin-top: 40px;
-            margin-bottom: 10px;
-            color: #111;
+        @keyframes fade {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 1; }
         }
-        .contact {
+        h2 {
+            color: #000;
+            font-size: 1.2em;
             margin-top: 30px;
-            font-size: 0.95em;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="logov2.png" alt="Logo de Eficia Insight" class="logo">
-        <div class="quote-container" id="quote"></div>
-    </div>
+    <header>
+        <img src="logov2.png" alt="Eficia Insight Logo" class="logo">
+        <div class="quote-box" id="quoteBox">“La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.” — Aristóteles</div>
+    </header>
 
-    <div>
-        <p><strong>Eficia Insight</strong> es una empresa creada para generar valor a través de la eficiencia, el sentido estratégico y el uso inteligente de soluciones avanzadas. Surge del encuentro entre la experiencia en entornos empresariales complejos y una manera clara y estructurada de abordar los retos, siempre enfocada en lo que realmente importa.</p>
-    </div>
+    <h1>Presentación de Eficia Insight</h1>
 
-    <div class="section-title">Origen y propósito</div>
+    <p>Eficia Insight es una empresa creada para generar valor a través de la eficiencia, el sentido estratégico y el uso inteligente de soluciones avanzadas. Surge del encuentro entre la experiencia en entornos empresariales complejos y una manera clara y estructurada de abordar los retos, siempre enfocada en lo que realmente importa.</p>
+
+    <h2>Origen y propósito</h2>
     <p>Eficia Insight nace de una firme convicción: que el verdadero impacto se alcanza cuando la inteligencia —en todas sus formas— se aplica con criterio, experiencia y sentido práctico. No como un accesorio, sino como parte de un proceso de pensamiento estructurado, estratégico y orientado a lo esencial.</p>
     <p>Nuestra marca refleja esa visión: inteligencia aplicada, eficiencia real y foco operativo. Su símbolo representa la versatilidad, la reflexión y el impacto de lo discreto, pero decisivo.</p>
     <p>En definitiva, nuestra forma de trabajar combina una lógica empresarial sólida con la capacidad de análisis y desarrollo potenciado por tecnología, para ofrecer soluciones eficaces y adaptadas.</p>
     <p>Nos dirigimos a empresas que buscan transformar y optimizar sus procesos: desde pymes con visión innovadora, hasta organizaciones de mayores dimensiones que enfrentan retos complejos.</p>
 
-    <div class="section-title">Qué hacemos</div>
+    <h2>Qué hacemos</h2>
     <ul>
         <li>Diagnóstico ágil y profundo de procesos, estructuras y dinámicas empresariales, identificando oportunidades desde el primer análisis.</li>
         <li>Propuestas de mejora accionables, viables y personalizadas.</li>
@@ -63,14 +73,12 @@
         <li>Comunicación clara, profesional y enfoque orientado a resultados.</li>
     </ul>
 
-    <div class="section-title">Cómo trabajamos</div>
+    <h2>Cómo trabajamos</h2>
     <p>Con rigor, cercanía, discreción y sentido práctico. Apostamos por la claridad, las soluciones personalizadas y el impacto real y sostenible. Observamos, comprendemos y actuamos cuando y donde más valor podemos aportar, buscando siempre la sinergia con los equipos y el compromiso con la mejora continua.</p>
 
-    <div class="section-title">Datos de contacto</div>
-    <div class="contact">
-        Web: www.eficiainsight.com<br>
-        Email: info@eficiainsight.com
-    </div>
+    <h2>Datos de contacto</h2>
+    <p>Web: www.eficiainsight.com<br>
+    Email: info@eficiainsight.com</p>
 
     <script>
         const quotes = [
@@ -83,12 +91,10 @@
             "“La calidad nunca es un accidente; siempre es el resultado de un esfuerzo inteligente.” — John Ruskin"
         ];
         let index = 0;
-        function rotateQuotes() {
-            document.getElementById('quote').textContent = quotes[index];
+        setInterval(() => {
             index = (index + 1) % quotes.length;
-        }
-        rotateQuotes();
-        setInterval(rotateQuotes, 7000);
+            document.getElementById('quoteBox').innerText = quotes[index];
+        }, 7000);
     </script>
 </body>
 </html>
