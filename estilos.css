@@ -1,31 +1,33 @@
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1200px;
+    font-family: sans-serif;
 }
-header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
+
+/* Mantenemos estilos básicos si los hubiera (ejemplo de estilos base) */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
 }
-.logo {
-    max-width: 300px;
-    height: auto;
+
+p {
+    line-height: 1.6;
 }
-.quote {
+
+ul {
+    padding-left: 20px;
+}
+
+#logo {
+    float: left;
+    width: 25%;
+}
+
+#quote {
+    float: right;
+    width: 50%;
+    text-align: right;
     font-style: italic;
-    font-size: 1.2em;
-    margin-top: 10px;
-    line-height: 1.4;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-main {
-    padding: 20px;
-}
-h2 {
-    color: #222;
     margin-top: 40px;
 }
