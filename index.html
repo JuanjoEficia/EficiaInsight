@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Eficia Insight</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
     <header>
         <img src="logov2.jpeg" alt="Logo de Eficia Insight" class="logo">
-        <div class="citas" id="citas"></div>
+        <div id="cita" class="quote"></div>
     </header>
 
     <main>
@@ -47,37 +49,39 @@
 
         <section>
             <h2>Liderar con inteligencia aplicada</h2>
-            <p>La eficiencia no es un concepto neutro: redefine estructuras y deja al descubierto lo esencial.</p>
-            <p>La inteligencia artificial empieza a mostrar con claridad qué aporta valor… y qué no.</p>
-            <p>No es una amenaza: es una oportunidad.</p>
-            <p>La verdadera eficiencia importa —de forma directa y urgente— a quienes lideran, deciden y responden por el resultado.</p>
-            <p>En Eficia Insight acompañamos esa transformación con soluciones estratégicas, operativas y tecnológicas que refuerzan el liderazgo sin sustituirlo.</p>
-            <p>Pensamos junto a quien toma decisiones, aportando foco, estructura y herramientas que generan impacto real.</p>
+            <p>La eficiencia no es un concepto neutro: redefine estructuras y deja al descubierto lo esencial.<br>
+            La inteligencia artificial empieza a mostrar con claridad qué aporta valor… y qué no.<br>
+            No es una amenaza: es una oportunidad.<br>
+            La verdadera eficiencia importa —de forma directa y urgente— a quienes lideran, deciden y responden por el resultado.<br>
+            En Eficia Insight acompañamos esa transformación con soluciones estratégicas, operativas y tecnológicas que refuerzan el liderazgo sin sustituirlo.<br>
+            Pensamos junto a quien toma decisiones, aportando foco, estructura y herramientas que generan impacto real.</p>
         </section>
 
         <section>
             <h2>Datos de contacto</h2>
-            <p>Web: <a href="http://www.eficiainsight.com">www.eficiainsight.com</a></p>
-            <p>Email: <a href="mailto:info@eficiainsight.com">info@eficiainsight.com</a></p>
+            <p>Web: www.eficiainsight.com</p>
+            <p>Email: info@eficiainsight.com</p>
         </section>
     </main>
 
     <script>
-        const citas = [
-            "Menos ruido, más estructura.",
-            "La inteligencia bien aplicada transforma.",
-            "Pensar bien, hacer mejor.",
-            "Impacto con sentido práctico.",
-            "Estrategia que se nota."
+        const quotes = [
+            "“La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.” — Aristóteles",
+            "“La imaginación es más importante que el conocimiento. El conocimiento es limitado. La imaginación rodea el mundo.” — Albert Einstein",
+            "“Ver lo que todos han visto y pensar lo que nadie ha pensado.” — Albert Szent-Györgyi",
+            "“La simplicidad es la máxima sofisticación.” — Leonardo da Vinci",
+            "“Todo debe hacerse tan simple como sea posible, pero no más sencillo.” — Albert Einstein",
+            "“La claridad es el mayor valor de un mensaje.” — Steve Jobs",
+            "“La calidad nunca es un accidente; siempre es el resultado de un esfuerzo inteligente.” — John Ruskin"
         ];
         let citaIndex = 0;
-        const citaDiv = document.getElementById("citas");
-        function rotarCitas() {
-            citaDiv.textContent = citas[citaIndex];
-            citaIndex = (citaIndex + 1) % citas.length;
+        const citaElemento = document.getElementById("cita");
+        function mostrarCita() {
+            citaElemento.textContent = quotes[citaIndex];
+            citaIndex = (citaIndex + 1) % quotes.length;
         }
-        rotarCitas();
-        setInterval(rotarCitas, 4000);
+        setInterval(mostrarCita, 5000);
+        mostrarCita();
     </script>
 </body>
 </html>
