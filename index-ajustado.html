@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eficia Insight</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="logo">
+            <img src="logov2.png" alt="Logo Eficia Insight">
+        </div>
+        <div class="citas" id="cita"></div>
+    </div>
+
+    <div class="contenido">
+        <h2>Presentación de Eficia Insight</h2>
+        <p>
+            Eficia Insight es una consultora creada para generar valor a través de la eficiencia y el uso inteligente de soluciones avanzadas.
+            Surge del encuentro entre la experiencia en entornos empresariales complejos y una manera clara y estructurada de abordar los retos,
+            siempre enfocada en lo que realmente importa.
+        </p>
+        <p>
+            En Eficia Insight conectamos el pensamiento directivo, la tecnología y la inteligencia aplicada para transformar la gestión empresarial con impacto y sentido estratégico,
+            ofreciendo soluciones reales y adaptadas que combinan visión estratégica, eficiencia operativa y dominio práctico de la inteligencia artificial.
+        </p>
+        <p>
+            Nuestro objetivo es claro: ayudar a líderes y empresas a gestionar mejor, con más visión y control, activando y optimizando todo el potencial existente
+            con foco en resultados y generación de nuevas oportunidades.
+        </p>
+
+        <h2>Origen y propósito</h2>
+        <p>
+            Eficia Insight nace de una firme convicción: que el verdadero impacto se alcanza cuando la inteligencia —en todas sus formas— se aplica con criterio, experiencia y sentido práctico.
+            No como un accesorio, sino como parte de un proceso de pensamiento estructurado, estratégico y orientado a lo esencial.
+        </p>
+        <p>
+            Hoy, esa visión cobra más sentido que nunca: en un entorno donde la inteligencia artificial está transformando radicalmente las posibilidades de gestión,
+            ponemos esa capacidad y otras soluciones estratégicas al servicio directo de quien lidera, con claridad, confianza y control.
+        </p>
+        <p>
+            En definitiva, nuestra forma de trabajar combina una lógica empresarial sólida con la capacidad de análisis y desarrollo potenciado por tecnología,
+            para ofrecer soluciones eficaces y adaptadas.
+        </p>
+        <p>
+            Nos dirigimos a empresas decididas a optimizar su gestión y evolucionar sus procesos: desde pymes con visión innovadora, hasta organizaciones de mayores dimensiones que enfrentan retos complejos.
+        </p>
+
+        <h2>Qué hacemos</h2>
+        <ul>
+            <li>Asistencia estratégica para directivos y equipos que buscan gestionar con más foco, criterio y agilidad, incorporando herramientas inteligentes y soluciones personalizadas.</li>
+            <li>Diagnóstico ágil y profundo de procesos, estructuras y lógicas de decisión, identificando oportunidades desde el primer análisis.</li>
+            <li>Propuestas de mejora accionables y adaptadas al contexto, con impacto real y aplicabilidad inmediata.</li>
+            <li>Automatización inteligente de tareas, flujos y reportes, utilizando tecnología accesible y flexible, adaptada a las necesidades reales de cada empresa o departamento.</li>
+            <li>Acompañamiento profesional y alineado, con resultados visibles desde el principio.</li>
+            <li>Comunicación clara, rigurosa y con foco operativo.</li>
+        </ul>
+
+        <h2>Cómo trabajamos</h2>
+        <p>
+            Con rigor, cercanía, discreción y sentido práctico. Apostamos por la claridad, las soluciones personalizadas y el impacto real y sostenible.
+            Observamos, comprendemos y actuamos cuando y donde más valor podemos aportar, buscando siempre la sinergia con los equipos y el compromiso con la mejora continua.
+        </p>
+        <p>
+            Acompañamos a la dirección en la toma de decisiones clave, aportando soluciones aplicadas y una perspectiva estratégica que amplifica su capacidad de análisis, ejecución y liderazgo.
+        </p>
+
+        <h2>Liderar con inteligencia aplicada</h2>
+        <p>
+            La eficiencia no es un concepto neutro: redefine estructuras y deja al descubierto lo esencial. La inteligencia artificial empieza a mostrar con claridad qué aporta valor… y qué no.
+            No es una amenaza: es una oportunidad. La verdadera eficiencia importa —de forma directa y urgente— a quienes lideran, deciden y responden por el resultado.
+        </p>
+        <p>
+            En Eficia Insight acompañamos esa transformación con soluciones estratégicas, operativas y tecnológicas que refuerzan el liderazgo sin sustituirlo.
+        </p>
+        <p>
+            Pensamos junto a quienes toman decisiones, aportando foco, estructura y herramientas que generan impacto real.
+        </p>
+
+        <h2>Datos de contacto</h2>
+        <p>Web: www.eficiainsight.com</p>
+        <p>Email: info@eficiainsight.com</p>
+    </div>
+
+    <script>
+        const quotes = [
+            "“La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.” — Aristóteles",
+            "“La imaginación es más importante que el conocimiento. El conocimiento es limitado. La imaginación rodea el mundo.” — Albert Einstein",
+            "“Ver lo que todos han visto y pensar lo que nadie ha pensado.” — Albert Szent-Györgyi",
+            "“La simplicidad es la máxima sofisticación.” — Leonardo da Vinci",
+            "“Todo debe hacerse tan simple como sea posible, pero no más sencillo.” — Albert Einstein",
+            "“La claridad es el mayor valor de un mensaje.” — Steve Jobs",
+            "“La calidad nunca es un accidente; siempre es el resultado de un esfuerzo inteligente.” — John Ruskin"
+        ];
+        let currentQuote = 0;
+        function rotateQuotes() {
+            document.getElementById("cita").textContent = quotes[currentQuote];
+            currentQuote = (currentQuote + 1) % quotes.length;
+        }
+        setInterval(rotateQuotes, 5000);
+        rotateQuotes();
+    </script>
+</body>
+</html>
