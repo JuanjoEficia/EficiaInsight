@@ -4,7 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <title>Eficia Insight</title>
-    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #ffffff;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 25%;
+        }
+        .quote-box {
+            width: 50%;
+            text-align: right;
+            font-style: italic;
+            font-size: 1.1em;
+            min-height: 60px;
+        }
+        section {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logov2.png" alt="Logo Eficia Insight" class="logo">
+        <div class="quote-box" id="quote-box">“La claridad es el mayor valor de un mensaje.” — Steve Jobs</div>
+    </div>
+
+    <section>
+        <h2>Presentación de Eficia Insight</h2>
+        <p>Eficia Insight es una empresa creada para generar valor a través de la eficiencia y el uso inteligente de soluciones avanzadas...
+        </p>
+    </section>
+
+    <section>
+        <h2>Origen y propósito</h2>
+        <p>Eficia Insight nace de una firme convicción: que el verdadero impacto se alcanza cuando la inteligencia —en todas sus formas— ...
+        </p>
+    </section>
+
+    <section>
+        <h2>Qué hacemos</h2>
+        <ul>
+            <li>Asistencia estratégica para directivos y equipos que buscan gestionar con más foco...</li>
+            <li>Diagnóstico ágil y profundo de procesos, estructuras y lógica de decisión...</li>
+            <li>Propuestas de mejora accionables, viables y adaptadas al contexto...</li>
+            <li>Automatización inteligente de tareas, flujos y reportes...</li>
+            <li>Acompañamiento profesional y alineado, con resultados visibles desde el principio.</li>
+            <li>Comunicación clara, rigurosa y con foco operativo.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Cómo trabajamos</h2>
+        <p>Con rigor, cercanía, discreción y sentido práctico. Apostamos por la claridad, las soluciones personalizadas...</p>
+    </section>
+
+    <section>
+        <h2>Liderar con inteligencia aplicada</h2>
+        <p>La eficiencia no es un concepto neutro: redefine estructuras y deja al descubierto lo esencial...
+        </p>
+    </section>
+
+    <section>
+        <h2>Datos de contacto</h2>
+        <p>Web: www.eficiainsight.com<br>Email: info@eficiainsight.com</p>
+    </section>
+
     <script>
         const quotes = [
             "“La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.” — Aristóteles",
@@ -15,55 +87,16 @@
             "“La claridad es el mayor valor de un mensaje.” — Steve Jobs",
             "“La calidad nunca es un accidente; siempre es el resultado de un esfuerzo inteligente.” — John Ruskin"
         ];
-        let currentQuote = 0;
+
+        let quoteIndex = 0;
+        const quoteBox = document.getElementById("quote-box");
+
         function rotateQuote() {
-            const quoteElement = document.getElementById("quote");
-            quoteElement.textContent = quotes[currentQuote];
-            currentQuote = (currentQuote + 1) % quotes.length;
+            quoteIndex = (quoteIndex + 1) % quotes.length;
+            quoteBox.textContent = quotes[quoteIndex];
         }
-        window.onload = function() {
-            rotateQuote();
-            setInterval(rotateQuote, 6000);
-        };
+
+        setInterval(rotateQuote, 6000);
     </script>
-</head>
-<body>
-    <header>
-        <img src="logov2.png" alt="Eficia Insight Logo" class="logo">
-        <div id="quote" class="quote"></div>
-    </header>
-    <main>
-        <section>
-            <h2>Presentación de Eficia Insight</h2>
-            <p>Eficia Insight es una empresa creada para generar valor a través de la eficiencia y el uso inteligente de soluciones avanzadas...</p>
-        </section>
-        <section>
-            <h2>Origen y propósito</h2>
-            <p>Eficia Insight nace de una firme convicción: que el verdadero impacto se alcanza cuando la inteligencia...</p>
-        </section>
-        <section>
-            <h2>Qué hacemos</h2>
-            <ul>
-                <li>Asistencia estratégica para directivos y equipos...</li>
-                <li>Diagnóstico ágil y profundo...</li>
-                <li>Propuestas de mejora accionables...</li>
-                <li>Automatización inteligente de tareas...</li>
-                <li>Acompañamiento profesional y alineado...</li>
-                <li>Comunicación clara, rigurosa y con foco operativo.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Cómo trabajamos</h2>
-            <p>Con rigor, cercanía, discreción y sentido práctico...</p>
-        </section>
-        <section>
-            <h2>Liderar con inteligencia aplicada</h2>
-            <p>La eficiencia no es un concepto neutro: redefine estructuras...</p>
-        </section>
-        <section>
-            <h2>Datos de contacto</h2>
-            <p>Web: www.eficiainsight.com<br>Email: info@eficiainsight.com</p>
-        </section>
-    </main>
 </body>
 </html>
